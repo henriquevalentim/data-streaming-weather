@@ -1,0 +1,11 @@
+docker build -t kafka-producer .
+docker build -t flink-processor .
+docker-compose up -d
+
+docker logs --tail 2000 id_container
+
+chmod 777 *
+
+mvn package
+
+
